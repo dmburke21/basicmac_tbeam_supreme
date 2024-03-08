@@ -34,8 +34,8 @@
 // then select the right region at runtime using os_getRegion() and/or
 // LMIC_reset_ex().
 #if !defined(CFG_eu868) && !defined(CFG_us915)
-#define CFG_eu868 1
-//#define CFG_us915 1
+//#define CFG_eu868 1
+#define CFG_us915 1
 //#define CFG_as923 1
 //#define CFG_il915 1
 //#define CFG_kr920 1
@@ -69,7 +69,7 @@
 // Without this, assertion failures are *not* printed!
 #define CFG_DEBUG
 // When this is defined, additional debug output is printed.
-//#define CFG_DEBUG_VERBOSE
+#define CFG_DEBUG_VERBOSE
 // Debug output (and assertion failures) are printed to this Stream
 #define CFG_DEBUG_STREAM Serial
 // Define these to add some TX or RX specific debug output (needs
@@ -85,7 +85,7 @@
 // When this is defined, the standard libc printf function will print to
 // this Stream. You should probably use CFG_DEBUG and debug_printf()
 // instead, though.
-//#define LMIC_PRINTF_TO Serial
+#define LMIC_PRINTF_TO Serial
 
 // Remove/comment this to enable code related to beacon tracking.
 #define DISABLE_CLASSB
